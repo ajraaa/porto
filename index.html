@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percobaan Parallax Scrolling</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">AJRA</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mtb">
+            <h2 id="text">Anjayyyyyy</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mtf">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, sint quaerat. Iusto dicta delectus deleniti, possimus eveniet id at nobis vel, 
+                harum in consequuntur unde? Dolor in accusamus harum impedit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Quo, facere soluta ducimus sunt illum ratione quos blanditiis deserunt sit, accusantium possimus molestias placeat tempore fuga. 
+                Molestias consequuntur necessitatibus earum magnam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minus praesentium incidunt iure. Delectus neque mollitia, non, 
+                adipisci repudiandae quia molestias officiis soluta eum laboriosam inventore provident assumenda unde ipsa atque? Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit. <br><br>
+                
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, sint quaerat. Iusto dicta delectus deleniti, possimus eveniet id at nobis vel, 
+                harum in consequuntur unde? Dolor in accusamus harum impedit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Quo, facere soluta ducimus sunt illum ratione quos blanditiis deserunt sit, accusantium possimus molestias placeat tempore fuga. 
+                Molestias consequuntur necessitatibus earum magnam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minus praesentium incidunt iure. <br><br>
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, sint quaerat. Iusto dicta delectus deleniti, possimus eveniet id at nobis vel, 
+                harum in consequuntur unde? Dolor in accusamus harum impedit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Quo, facere soluta ducimus sunt illum ratione quos blanditiis deserunt sit, accusantium possimus molestias placeat tempore fuga. 
+                Molestias consequuntur necessitatibus earum magnam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minus praesentium incidunt iure. Delectus neque mollitia, non, 
+                adipisci repudiandae quia molestias officiis soluta eum laboriosam inventore provident assumenda unde ipsa atque? Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit. <br><br>
+
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Quis laborum delectus optio corrupti voluptates veniam magnam harum rerum molestiae repudiandae nulla, 
+                accusantium sit aut consequuntur modi nam, eius tenetur porro! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptatum. 
+                Reiciendis corrupti cum voluptatum quod nobis explicabo aliquid quisquam ea provident ex quia, ad ut dolores in modi. Dolorum, vitae.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore impedit modi quo natus animi nisi, officia molestiae, earum veritatis 
+                aut omnis maiores officiis vel temporibus quaerat rerum fugit labore. Soluta. <br><br>
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa eligendi eum nobis repellat nihil quam aut, 
+                harum sint eveniet distinctio itaque laudantium odit non cupiditate rem iure corrupti unde! Aperiam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic quasi voluptatibus quas, 
+                fugiat velit ullam illo suscipit! Odio delectus aspernatur fugit velit iusto voluptates voluptatum ratione laudantium rerum nihil.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda voluptates quae maxime incidunt quas aliquam, 
+                reiciendis qui similique! Corporis error mollitia similique modi velit ducimus est quidem, dignissimos placeat facere.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mtb = document.getElementById('mtb');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mtn = document.getElementById('mtn');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mtb.style.top = value * 0.5 + 'px';
+                mtf.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
